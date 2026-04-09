@@ -1,0 +1,127 @@
+# TaskMaster Setup
+
+## Backend Setup
+
+* Create the project folder:
+
+  ```bash
+  mkdir TaskMaster
+  ```
+
+* Go inside and create backend folder:
+
+  ```bash
+  cd TaskMaster
+  mkdir Backend
+  ```
+
+* Initialize Node.js project:
+
+  ```bash
+  cd Backend
+  npm init -y
+  ```
+
+* Install dependencies:
+
+  ```bash
+  npm install express cors
+  ```
+
+* Create `server.js` and run the server:
+
+  ```bash
+  node server.js
+  ```
+
+* Open in browser:
+
+  ```
+  http://localhost:5000
+  ```
+
+* Update `server.js` with GET, POST, UPDATE, DELETE endpoints
+
+* Restart the server:
+
+  * Press `Ctrl + C` in CMD
+  * Run:
+
+    ```bash
+    node server.js
+    ```
+
+* Test all APIs using Postman / Thunder Client
+
+---
+
+## Frontend Setup
+
+* Stop the backend server:
+
+  * Press `Ctrl + C` in CMD
+
+* Go back to root folder:
+
+  ```bash
+  cd ..
+  ```
+
+* Create React app:
+
+  ```bash
+  npx create-react-app frontend
+  ```
+
+* Go to frontend folder:
+
+  ```bash
+  cd frontend
+  ```
+
+* Start the React server:
+
+  ```bash
+  npm start
+  ```
+
+* Open in browser:
+
+  ```
+  http://localhost:3000
+  ```
+
+* Update `src/App.js` and `App.css` to connect frontend with backend (implement all functionalities)
+
+
+# ⚙️ Additional Setup
+
+## Create `.gitignore`
+
+```bash
+touch .gitignore
+```
+
+Add:
+
+```
+node_modules/
+build/
+.env
+```
+
+---
+
+# 🧪 Testing Checklist
+
+Ensure all features work:
+
+* [ ] Add task
+* [ ] Edit task
+* [ ] Toggle task
+* [ ] Delete task
+* [ ] Add subtask
+* [ ] Toggle subtask
+* [ ] Delete subtask
+* [ ] Filters working
+* [ ] Page loads data correctly
