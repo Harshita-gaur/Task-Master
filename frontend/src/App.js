@@ -10,7 +10,7 @@ function App() {
 
   // Fetch tasks
   const fetchTasks = async () => {
-    const res = await fetch('https://task-master-backend-285e.onrender.com/tasks');
+    const res = await fetch('https://task-master-backend-54z8.onrender.com/tasks');
     const data = await res.json();
     setTasks(data);
   };
@@ -23,7 +23,7 @@ function App() {
   const addTask = async () => {
     if (!title.trim()) return;
 
-    await fetch('https://task-master-backend-285e.onrender.com/tasks', {
+    await fetch('https://task-master-backend-54z8.onrender.com/tasks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title })
@@ -35,7 +35,7 @@ function App() {
 
   // Toggle task
   const toggleTask = async (id) => {
-    await fetch(`https://task-master-backend-285e.onrender.com/tasks/${id}`, {
+    await fetch(`https://task-master-backend-54z8.onrender.com/tasks/${id}`, {
       method: 'PATCH'
     });
     fetchTasks();
@@ -43,7 +43,7 @@ function App() {
 
   // Delete task
   const deleteTask = async (id) => {
-    await fetch(`https://task-master-backend-285e.onrender.com/tasks/${id}`, {
+    await fetch(`https://task-master-backend-54z8.onrender.com/tasks/${id}`, {
       method: 'DELETE'
     });
     fetchTasks();
@@ -57,7 +57,7 @@ function App() {
 
   // Save edit
   const saveEdit = async (id) => {
-    await fetch(`https://task-master-backend-285e.onrender.com/tasks/${id}`, {
+    await fetch(`https://task-master-backend-54z8.onrender.com/tasks/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title: editText })
@@ -71,7 +71,7 @@ function App() {
   const addSubtask = async (taskId, text) => {
     if (!text.trim()) return;
 
-    await fetch(`https://task-master-backend-285e.onrender.com/tasks/${taskId}/subtasks`, {
+    await fetch(`https://task-master-backend-54z8.onrender.com/tasks/${taskId}/subtasks`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title: text })
@@ -82,7 +82,7 @@ function App() {
 
   // Toggle subtask
   const toggleSubtask = async (taskId, subId) => {
-    await fetch(`https://task-master-backend-285e.onrender.com/tasks/${taskId}/subtasks/${subId}`, {
+    await fetch(`https://task-master-backend-54z8.onrender.com/tasks/${taskId}/subtasks/${subId}`, {
       method: 'PATCH'
     });
 
@@ -91,7 +91,7 @@ function App() {
 
   // Delete subtask
   const deleteSubtask = async (taskId, subId) => {
-    await fetch(`https://task-master-backend-285e.onrender.com/tasks/${taskId}/subtasks/${subId}`, {
+    await fetch(`https://task-master-backend-54z8.onrender.com/tasks/${taskId}/subtasks/${subId}`, {
       method: 'DELETE'
     });
 
